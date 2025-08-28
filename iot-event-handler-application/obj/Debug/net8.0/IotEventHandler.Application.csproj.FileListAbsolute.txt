@@ -1,0 +1,11 @@
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\iot-event-handler-application\bin\Debug\net8.0\IotEventHandler.Application.deps.json
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\iot-event-handler-application\bin\Debug\net8.0\IotEventHandler.Application.dll
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\iot-event-handler-application\bin\Debug\net8.0\IotEventHandler.Application.pdb
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\iot-event-handler-application\obj\Debug\net8.0\IotEventHandler.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\iot-event-handler-application\obj\Debug\net8.0\IotEventHandler.Application.AssemblyInfoInputs.cache
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\iot-event-handler-application\obj\Debug\net8.0\IotEventHandler.Application.AssemblyInfo.cs
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\iot-event-handler-application\obj\Debug\net8.0\IotEventHandler.Application.csproj.CoreCompileInputs.cache
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\iot-event-handler-application\obj\Debug\net8.0\IotEventHandler.Application.dll
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\iot-event-handler-application\obj\Debug\net8.0\refint\IotEventHandler.Application.dll
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\iot-event-handler-application\obj\Debug\net8.0\IotEventHandler.Application.pdb
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\iot-event-handler-application\obj\Debug\net8.0\ref\IotEventHandler.Application.dll

@@ -1,0 +1,17 @@
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\IotEventHandler.Infrastructure\bin\Debug\net8.0\IotEventHandler.Infrastructure.deps.json
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\IotEventHandler.Infrastructure\bin\Debug\net8.0\IotEventHandler.Infrastructure.dll
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\IotEventHandler.Infrastructure\bin\Debug\net8.0\IotEventHandler.Infrastructure.pdb
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\IotEventHandler.Infrastructure\bin\Debug\net8.0\IotEventHandler.Domain.dll
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\IotEventHandler.Infrastructure\bin\Debug\net8.0\IotEventHandler.Domain.pdb
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\IotEventHandler.Infrastructure\obj\Debug\net8.0\IotEventHandler.Infrastructure.csproj.AssemblyReference.cache
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\IotEventHandler.Infrastructure\obj\Debug\net8.0\IotEventHandler.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\IotEventHandler.Infrastructure\obj\Debug\net8.0\IotEventHandler.Infrastructure.AssemblyInfoInputs.cache
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\IotEventHandler.Infrastructure\obj\Debug\net8.0\IotEventHandler.Infrastructure.AssemblyInfo.cs
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\IotEventHandler.Infrastructure\obj\Debug\net8.0\IotEventHandler.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\IotEventHandler.Infrastructure\obj\Debug\net8.0\IotEvent.5B7AEDD1.Up2Date
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\IotEventHandler.Infrastructure\obj\Debug\net8.0\IotEventHandler.Infrastructure.dll
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\IotEventHandler.Infrastructure\obj\Debug\net8.0\refint\IotEventHandler.Infrastructure.dll
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\IotEventHandler.Infrastructure\obj\Debug\net8.0\IotEventHandler.Infrastructure.pdb
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\IotEventHandler.Infrastructure\obj\Debug\net8.0\ref\IotEventHandler.Infrastructure.dll
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\IotEventHandler.Infrastructure\bin\Debug\net8.0\IotEventHandler.Infrastructure.runtimeconfig.json
+C:\Daniel\Projects\iot-event-handler\iot-event-handler\IotEventHandler.Infrastructure\obj\Debug\net8.0\IotEventHandler.Infrastructure.genruntimeconfig.cache

@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IotEventHandler", "iot-event-handler\IotEventHandler.csproj", "{D3CBB5B3-FAFA-4C16-9698-E4F91847EAEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IotEventHandler.Application", "iot-event-handler-application\IotEventHandler.Application.csproj", "{B45036ED-D5F2-4FEF-B632-1B3914EA052B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IotEventHandler.Domain", "IotEventHandler.Domain\IotEventHandler.Domain.csproj", "{1A7E99EA-FFE1-4A8F-A39F-1B83827775B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IotEventHandler.Infrastructure", "IotEventHandler.Infrastructure\IotEventHandler.Infrastructure.csproj", "{502CBF5E-2A3C-494F-986B-EDDAC5B3A442}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3CBB5B3-FAFA-4C16-9698-E4F91847EAEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3CBB5B3-FAFA-4C16-9698-E4F91847EAEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3CBB5B3-FAFA-4C16-9698-E4F91847EAEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3CBB5B3-FAFA-4C16-9698-E4F91847EAEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B45036ED-D5F2-4FEF-B632-1B3914EA052B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B45036ED-D5F2-4FEF-B632-1B3914EA052B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B45036ED-D5F2-4FEF-B632-1B3914EA052B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B45036ED-D5F2-4FEF-B632-1B3914EA052B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A7E99EA-FFE1-4A8F-A39F-1B83827775B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A7E99EA-FFE1-4A8F-A39F-1B83827775B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A7E99EA-FFE1-4A8F-A39F-1B83827775B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A7E99EA-FFE1-4A8F-A39F-1B83827775B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{502CBF5E-2A3C-494F-986B-EDDAC5B3A442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{502CBF5E-2A3C-494F-986B-EDDAC5B3A442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{502CBF5E-2A3C-494F-986B-EDDAC5B3A442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{502CBF5E-2A3C-494F-986B-EDDAC5B3A442}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A229D0CF-68EB-4E00-BD11-8ED843C95AF0}
+	EndGlobalSection
+EndGlobal
