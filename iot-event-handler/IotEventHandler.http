@@ -1,6 +1,0 @@
-@iot_event_handler_HostAddress = http://localhost:5038
-
-GET {{iot_event_handler_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
