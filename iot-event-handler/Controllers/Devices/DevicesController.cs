@@ -1,6 +1,9 @@
 ﻿using IotEventHandler.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using iot_event_handler_application.DTO.Request.Devices;
+using IotEventHandler.Domain.Entities.Devices;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace iot_event_handler.Controllers.Devices
 {
@@ -18,10 +21,20 @@ namespace iot_event_handler.Controllers.Devices
         }
 
         [HttpPost]
-        public string Create()
+        public IActionResult CreateDevice(CreateDeviceDTO createDeviceDTO)
         {
-            string test = "opa";
-            return test;
+
+            var deviceEntity = new DevicesEntity() 
+            { 
+                IntegrationId = createDeviceDTO.IntegrationId,
+                Location = createDeviceDTO.Location, 
+                Name = createDeviceDTO.Name
+            };
+
+            dbContext.Devices.Add(deviceEntity);
+            dbContext.SaveChanges();
+
+            return StatusCode(201, deviceEntity);
         }
 
         [HttpGet]
@@ -46,11 +59,11 @@ namespace iot_event_handler.Controllers.Devices
             return Ok(device);
         }
 
-    //[HttpDelete("devices")]
-    //public string Store()
-    //{
-    //    string test = "opa";
-    //    return test;
-    //}
+        //[HttpDelete("devices")]
+        //public string Store()
+        //{
+        //    string test = "opa";
+        //    return test;
+        //}
 }
 }

@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\iot-event-handler-application\IotEventHandler.Application.csproj" />
     <ProjectReference Include="..\IotEventHandler.Infrastructure\IotEventHandler.Infrastructure.csproj" />
   </ItemGroup>
 
