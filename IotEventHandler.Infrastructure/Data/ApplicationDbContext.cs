@@ -1,4 +1,5 @@
 ﻿using IotEventHandler.Domain.Entities.Devices;
+using IotEventHandler.Domain.Entities.Events;
 using Microsoft.EntityFrameworkCore;
 
 namespace IotEventHandler.Infrastructure.Data
@@ -10,5 +11,6 @@ namespace IotEventHandler.Infrastructure.Data
         }
 
         public DbSet<DevicesEntity> Devices { get; set; }
+        public DbSet<EventsEntity> Events { get; set; }
     }
 }
