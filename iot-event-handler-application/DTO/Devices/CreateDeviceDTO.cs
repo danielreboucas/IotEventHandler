@@ -1,4 +1,4 @@
-﻿namespace iot_event_handler_application.DTO.Request.Devices
+﻿namespace iot_event_handler_application.DTO.Devices
 {
     public class CreateDeviceDTO
     {
