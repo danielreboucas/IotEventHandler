@@ -39,7 +39,9 @@ namespace iot_event_handler.Controllers.Events
             {
                 Temperature = createEventDTO.Temperature.ToString("F2"),
                 Humidity = createEventDTO.Humidity.ToString("F2"),
-                DeviceUuid = device.Uuid
+                DeviceUuid = device.Uuid,
+                Timestamp = createEventDTO.Timestamp,
+                IsAlarm = createEventDTO.IsAlarm
             };
 
             dbContext.Events.Add(eventEntity);

@@ -14,5 +14,7 @@ namespace IotEventHandler.Domain.Entities.Events
         public Guid DeviceUuid { get; set; }
         public string? Temperature { get; set; }
         public string? Humidity { get; set; }
+        public DateTime Timestamp { get; set; }
+        public bool IsAlarm { get; set; }
     }
 }
