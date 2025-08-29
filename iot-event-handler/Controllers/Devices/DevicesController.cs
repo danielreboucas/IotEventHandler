@@ -42,40 +42,28 @@ namespace iot_event_handler.Controllers.Devices
             var callbackUrl = _configuration["ExternalApiSettings:CallbackUrl"];
             var externalApiUrl = _configuration["ExternalApiSettings:BaseUrl"];
 
-            try
+            var response = await _httpClient.PostAsJsonAsync($"{externalApiUrl}/register", new
             {
-                var response = await _httpClient.PostAsJsonAsync($"{externalApiUrl}/register", new
-                {
-                    deviceName = deviceEntity.Name,
-                    location = deviceEntity.Location,
-                    callbackUrl = $"{callbackUrl}/events"
+                deviceName = deviceEntity.Name,
+                location = deviceEntity.Location,
+                callbackUrl = $"{callbackUrl}/events"
 
-                });
+            });
 
-                if (response.IsSuccessStatusCode)
-                {
-                    var responseContent = await response.Content.ReadAsStringAsync();
-                    var responseData = JsonSerializer.Deserialize<dynamic>(responseContent);
-                    deviceEntity.IntegrationId = responseData.GetProperty("integrationId").GetString();
-                }
-
-                if (!response.IsSuccessStatusCode)
-                {
-                    _logger.LogWarning($"External API call failed with status: {response.StatusCode}");
-                }
-                 
-            }
-            catch (Exception ex)
+            if (response.IsSuccessStatusCode)
             {
-                 _logger.LogError(ex, "Failed to call external API");
+                var responseContent = await response.Content.ReadAsStringAsync();
+                var responseData = JsonSerializer.Deserialize<dynamic>(responseContent);
+                deviceEntity.IntegrationId = responseData.GetProperty("integrationId").GetString();
+
+                dbContext.Devices.Add(deviceEntity);
+                dbContext.SaveChanges();
+
+                return StatusCode(201, deviceEntity);
             }
-
-
-            dbContext.Devices.Add(deviceEntity);
-            dbContext.SaveChanges();
-
-            return StatusCode(201, deviceEntity);
-            
+    
+            _logger.LogError($"External API call failed with status: {response.StatusCode}");
+            return StatusCode(424, "Failed to generate an integrationId.");
         }
 
         [HttpGet]
@@ -90,7 +78,6 @@ namespace iot_event_handler.Controllers.Devices
         {
             var device = await dbContext.Devices.FirstOrDefaultAsync(d => d.Uuid == uuid);
 
-            _logger.LogInformation("device", device);
             if (device == null)
             {
                 _logger.LogError("Error occurred while retrieving devices");
@@ -108,10 +95,28 @@ namespace iot_event_handler.Controllers.Devices
         }
 
         [HttpDelete("{uuid:guid}")]
-        public string DeleteDevice()
+        public async Task<IActionResult> DeleteDevice(Guid uuid)
         {
-            string test = "opa";
-            return test;
+            var device = dbContext.Devices.Find(uuid);
+
+            if (device == null)
+            {
+                return NotFound();
+            }
+
+            var externalApiUrl = _configuration["ExternalApiSettings:BaseUrl"];
+            var response = await _httpClient.DeleteAsync($"{externalApiUrl}/unregister/{device.IntegrationId}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                dbContext.Devices.Remove(device);
+                dbContext.SaveChanges();
+
+                return Ok("Device deleted successfully!");
+            }
+
+            _logger.LogError($"External API call failed with status: {response.StatusCode}");
+            return StatusCode(500, "Failed to delete the device.");
         }
     }
 }
