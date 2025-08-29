@@ -80,7 +80,7 @@ namespace iot_event_handler.Controllers.Devices
 
             if (device == null)
             {
-                _logger.LogError("Error occurred while retrieving devices");
+                _logger.LogError("Error occurred while retrieving device");
                 return NotFound();
             }
 
@@ -88,10 +88,22 @@ namespace iot_event_handler.Controllers.Devices
         }
 
         [HttpPut("{uuid:guid}")]
-        public string UpdateDevice()
+        public IActionResult UpdateDevice(Guid uuid, UpdateDeviceDTO updateDeviceDTO)
         {
-            string test = "opa";
-            return test;
+            var device = dbContext.Devices.Find(uuid);
+
+            if (device == null)
+            {
+                _logger.LogError("Error occurred while retrieving devices");
+                return NotFound();
+            }
+
+            device.Name = updateDeviceDTO.Name;
+            device.Location = updateDeviceDTO.Location;
+            device.IntegrationId = updateDeviceDTO.IntegrationId;
+            
+            dbContext.SaveChanges();
+            return Ok(device);
         }
 
         [HttpDelete("{uuid:guid}")]
