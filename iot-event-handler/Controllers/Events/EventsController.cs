@@ -45,7 +45,7 @@ namespace iot_event_handler.Controllers.Events
             dbContext.Events.Add(eventEntity);
             dbContext.SaveChanges();
 
-            _logger.LogError($"Event created: {createEventDTO}");
+            _logger.LogInformation($"Event created: {createEventDTO}");
             return StatusCode(201, createEventDTO);
         }
     }
