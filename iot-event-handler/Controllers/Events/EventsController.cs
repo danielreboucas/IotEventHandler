@@ -31,21 +31,21 @@ namespace iot_event_handler.Controllers.Events
 
             if (device == null)
             {
-                _logger.LogError($"Device with IntegrationId {createEventDTO.IntegrationId} not found.");
+                _logger.LogError("Device with IntegrationId {IntegrationId} not found", createEventDTO.IntegrationId);
                 return NotFound($"Device with IntegrationId {createEventDTO.IntegrationId} not found.");
             }
 
             var eventEntity = new EventsEntity()
             {
-                Temperature = createEventDTO.Temperature,
-                Humidity = createEventDTO.Humidity,
+                Temperature = createEventDTO.Temperature.ToString("F2"),
+                Humidity = createEventDTO.Humidity.ToString("F2"),
                 DeviceUuid = device.Uuid
             };
 
             dbContext.Events.Add(eventEntity);
-            dbContext.SaveChanges();
+            await dbContext.SaveChangesAsync();
 
-            _logger.LogInformation($"Event created: {createEventDTO}");
+            _logger.LogInformation("Event created successfully for device {DeviceUuid}", device.Uuid);
             return StatusCode(201, createEventDTO);
         }
     }
