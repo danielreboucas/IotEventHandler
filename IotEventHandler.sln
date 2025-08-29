@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IotEventHandler.Domain", "I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IotEventHandler.Infrastructure", "IotEventHandler.Infrastructure\IotEventHandler.Infrastructure.csproj", "{502CBF5E-2A3C-494F-986B-EDDAC5B3A442}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IotEventHandler.Tests", "IotEventHandler.Tests\IotEventHandler.Tests.csproj", "{01A4A3DC-2AE3-4BB9-9303-E9D5FDD12499}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{502CBF5E-2A3C-494F-986B-EDDAC5B3A442}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{502CBF5E-2A3C-494F-986B-EDDAC5B3A442}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{502CBF5E-2A3C-494F-986B-EDDAC5B3A442}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01A4A3DC-2AE3-4BB9-9303-E9D5FDD12499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01A4A3DC-2AE3-4BB9-9303-E9D5FDD12499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01A4A3DC-2AE3-4BB9-9303-E9D5FDD12499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01A4A3DC-2AE3-4BB9-9303-E9D5FDD12499}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
