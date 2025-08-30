@@ -100,7 +100,7 @@ namespace iot_event_handler.Controllers.Devices
 
             device.Name = updateDeviceDTO.Name;
             device.Location = updateDeviceDTO.Location;
-            device.IntegrationId = updateDeviceDTO.IntegrationId;
+            device.IntegrationId = device.IntegrationId;
             
             dbContext.SaveChanges();
             return Ok(device);

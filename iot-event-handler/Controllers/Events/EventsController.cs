@@ -50,5 +50,12 @@ namespace iot_event_handler.Controllers.Events
             _logger.LogInformation("Event created successfully for device {DeviceUuid}", device.Uuid);
             return StatusCode(201, createEventDTO);
         }
+
+        [HttpGet]
+        public IActionResult GetAllEvents()
+        {
+            var events = dbContext.Events.ToList();
+            return Ok(events);
+        }
     }
 }
