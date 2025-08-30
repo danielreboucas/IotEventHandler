@@ -90,3 +90,23 @@ Este projeto é uma API Web ASP.NET Core para receber e processar eventos de dis
 - Abra o projeto com Visual Studio ou VS Code.
 - Rode o projeto com `dotnet run` ou via IDE.
 - Utilize o Swagger para explorar e testar a API.
+
+## Porque Clean Architecture?
+### 1. **Separação de Responsabilidades**
+A Clean Architecture força uma separação clara entre camadas de domínio (regras de negócio), aplicação (casos de uso), infraestrutura (banco de dados, frameworks) e interfaces (controllers, APIs). Isso reduz acoplamento e facilita entender e modificar o sistema.
+
+### 2. **Facilidade para Testes**
+Como as regras de negócio ficam isoladas, é possível testar o domínio e os casos de uso sem depender do banco de dados ou de frameworks. Testes unitários se tornam mais simples e rápidos.
+
+### 3. **Independência de Tecnologias**
+A arquitetura permite trocar detalhes de implementação (ex: banco de dados, interface web, mensageria) sem afetar o núcleo do sistema. Isso proporciona maior flexibilidade para evoluir o projeto ou adaptar-se a novas demandas tecnológicas.
+
+### 4. **Manutenção e Evolução Facilitadas**
+Projetos de longa duração tendem a mudar requisitos e tecnologias. A Clean Architecture prepara o código para essas mudanças, evitando grandes refatorações e permitindo que novas funcionalidades sejam adicionadas de forma organizada.
+
+### 5. **Reutilização e Portabilidade**
+Os componentes centrais (domínio e casos de uso) podem ser reutilizados em diferentes contextos (ex: trocar a interface de API por uma interface gráfica, ou migrar para outro banco de dados) sem reescrever o núcleo da aplicação.
+
+### 6. **Organização e Clareza**
+O padrão determina convenções claras de organização dos arquivos e dependências, facilitando a entrada de novos desenvolvedores e a colaboração em equipe.
+
